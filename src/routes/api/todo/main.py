@@ -66,3 +66,19 @@ def create_todo():
     execute_query(sql, params, commit=True)
 
     return jsonify({"message": "Todo created successfully"}), 201
+
+
+@todo_route.route("/<int:id>", methods=["DELETE"])
+def delete_todo(id):
+    sql = f"""
+        DELETE FROM {TABLE_NAME}
+        WHERE id = :id
+    """
+
+    params = {
+        "id": id
+    }
+
+    execute_query(sql, params, commit=True)
+
+    return jsonify({"message": "Todo deleted successfully", "success": True}), 200

@@ -1,11 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef1ff;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.app {
+  width: calc(100% - 100px);
+  max-width: 800px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.input-group button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #5b6cff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background: #4453ff;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
 .todo-item {
   background: #f4f6ff;
   padding: 16px;
-  border-radius: 14px;
-  margin-bottom: 12px;
+  border-radius: 14px; 
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .todo-main h3 {
@@ -29,12 +84,21 @@
   margin-top: 6px;
   color: #666;
 }
-
+.status-container {
+  display: flex;
+  height: 25px;
+  gap: 5px;
+}
 .status {
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .status.pending {
@@ -45,4 +109,19 @@
 .status.completed {
   background: #c3e6cb;
   color: #155724;
+}
+
+.delete-btn {
+  height: 100%;
+  padding: 2px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ffdddd;
+  color: #a30000;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #ffb3b3;
 }
